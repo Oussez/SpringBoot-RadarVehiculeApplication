@@ -1,0 +1,22 @@
+syntax="proto3";//descripteur de web service de type GRPC
+option java_package="com.sdia.radar_microservice.grpc.stubs";; //declaraction de chemin où les stubs seront enregistrés.;
+option java_outer_classname="ProprietaireX";
+
+service ProprietaireServices{
+  //Type of communication  : UNARY MODEL
+  rpc GetProprietaireByVehiculeId(IdRequest) returns (Proprietaire);
+}
+
+//Definir le contenu des attributs de méthodes au-dessus : le contenu de messages échangés
+message Empty{
+}
+
+message Proprietaire{
+  int64 id=1;
+  string name=2;
+  string email=3;
+}
+
+message IdRequest{
+  int64 id=1;
+}

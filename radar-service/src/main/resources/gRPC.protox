@@ -1,0 +1,61 @@
+syntax="proto3";//descripteur de web service de type GRPC
+option java_package="com.sdia.radar_microservice.grpc.stubs"; //declaraction de chemin où les stubs seront enregistrés.;
+option java_outer_classname="RadarX";
+
+service RadarServices{
+  //Type of communication  : UNARY MODEL
+  rpc GetProprietaireByVehiculeId(IdRequest) returns (Proprietaire);
+  rpc GetRadarList(Empty) returns (ListRadar);
+  rpc DeleteRadar(IdRequest) returns (BoolDelete);
+  rpc GetAlo(Empty) returns (Alo);
+}
+
+//Definir le contenu des attributs de méthodes au-dessus : le contenu de messages échangés
+message Empty{
+}
+message Radar{
+  int64 id=1;
+  double vitesseMax=2;
+  repeated double coordonnees=3;
+  Infraction infraction=4;
+}
+
+message ListRadar{
+  repeated Radar radar=1;
+}
+message IdRequest{
+  int64 id=1;
+}
+
+message Proprietaire{
+  int64 id=1;
+  string name=2;
+  string email=3;
+}
+
+message BoolDelete{
+  bool delete=1;
+}
+
+message Infraction{
+   int64 id=1;
+   double vitesseVehicule=2;
+   double montantFraction=3;
+   string numMatricule=4;
+   int64 numRadar=5;
+   Radar radar=6;
+   Vehicule vehicule=7;
+}
+
+message Vehicule{
+   int64 id=1;
+   string numMatricule=2;
+   string marque=3;
+   int64 puissanceFiscale=4;
+   string modele=5;
+   int64 infractionID=6; //foreign key of another distant entity (Product)
+   Proprietaire proprietaire=7;
+}
+message Alo{
+  int64 id=1;
+}

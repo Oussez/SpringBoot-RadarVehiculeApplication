@@ -1,0 +1,56 @@
+type Query {
+		getAllVehicules: [Vehicule],
+		getVehiculeById(id : Int): Vehicule,
+	    getAllProprietaires: [Proprietaire],
+	    getProprietaireById(id : Int): Proprietaire
+		}
+
+
+type Mutation {
+	saveVehicule(vehicule : VehiculeType):Vehicule
+	updateVehicule(vehicule : VehiculeType, id : Int):Vehicule
+	deleteVehicule(id : Int):String
+
+	saveProprietaire(proprietaire : ProprietaireType):Proprietaire
+	updateProprietaire(proprietaire : ProprietaireType, id : Int):Proprietaire
+	deleteProprietaire(id : Int):String
+}
+
+type Vehicule {
+		Id : Int,
+		numMatricule : String,
+		marque : String,
+		puissanceFiscale : String,
+		modele : String,
+	#infraction : Infraction
+		}
+
+input VehiculeType {
+	Id : Int,
+	numMatricule : String,
+	marque : String,
+	puissanceFiscale : String,
+	modele : String,
+	infractionID : Int,
+	proprietaire : ProprietaireType
+	#infraction : Infraction
+}
+
+type Proprietaire {
+	Id : Int,
+	nom : String,
+	email : String,
+	vehicules : [Vehicule]
+#	infraction : Infraction
+}
+
+input ProprietaireType {
+	Id : Int,
+	nom : String,
+	email : String,
+	vehicules : [VehiculeType]
+	#	infraction : Infraction
+}
+
+#input TypeX --> pour definir un type ( classe ) d'un attribut
+#type TypeY --> pour définir un type ( classe ) de return

@@ -1,0 +1,48 @@
+syntax="proto3";//descripteur de web service de type GRPC
+option java_package="com.sdia.immatriculationservice.grpc.stubs"; //declaraction de chemin où les stubs seront enregistrés.;
+option java_outer_classname="ProprietaireX";
+
+service ProprietaireServices{
+  //Type of communication  : UNARY MODEL
+  rpc GetProprietaireById(ProprietaireByIdRequest) returns (Proprietaire);
+  rpc GetProprietairesList(Empty) returns (ListProprietaire);
+  rpc AddProprietaire(AddProprietaireRequest) returns (Proprietaire);
+  rpc DeleteProprietaire(ProprietaireByIdRequest) returns (BoolDelete);
+  rpc GetAlo(Empty) returns (Alo);
+  rpc GetProprietaireByVehiculeId(IdRequest) returns (Proprietaire);
+}
+
+//Definir le contenu des attributs de méthodes au-dessus : le contenu de messages échangés
+message Empty{
+}
+message ProprietaireByIdRequest{
+  int64 id=1;
+}
+
+message AddProprietaireRequest{
+  string name=2;
+  string email=3;
+  double amount=4;
+
+}
+
+message ListProprietaire{
+  repeated Proprietaire proprietaire=1;
+}
+message Alo{
+  string name=1;
+}
+
+message Proprietaire{
+  int64 id=1;
+  string name=2;
+  string email=3;
+}
+
+message BoolDelete{
+  bool delete=1;
+}
+
+message IdRequest{
+  int64 id=1;
+}

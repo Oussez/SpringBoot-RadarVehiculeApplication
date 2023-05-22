@@ -1,0 +1,67 @@
+package com.sdia.immatriculationservice.grpc.services;
+
+import com.sdia.immatriculationservice.entities.Proprietaire;
+import com.sdia.immatriculationservice.grpc.stubs.ProprietaireServiceGrpc;
+import com.sdia.immatriculationservice.grpc.stubs.ProprietaireX;
+import com.sdia.immatriculationservice.repositories.ProprietaireRepository;
+import io.grpc.stub.StreamObserver;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class ProprietaireService extends ProprietaireServiceGrpc.ProprietaireServiceImplBase {
+    @Autowired
+    private ProprietaireRepository proprietaireRepository;
+    @Override
+    public void getAccountsList(ProprietaireX.ProprietaireByIdRequest request, StreamObserver<ProprietaireX.AccountsListResponse> responseObserver) {
+        List<Proprietaire> comptes=proprietaireRepository.findAll();
+        List<ProprietaireX.Proprietaire> grpcAccountList = comptes.stream().map(account -> compteMapper.fromBankCount(account)).collect(Collectors.toList());
+        ProprietaireX.AccountsListResponse accountsListResponse= ProprietaireX.AccountsListResponse.newBuilder()
+                .addAllProprietaireXList(grpcAccountList)
+                .build();
+        responseObserver.onNext(accountsListResponse);
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void getProprietaireById(ProprietaireX.ProprietaireByIdRequest request, StreamObserver<ProprietaireX.Proprietaire> responseObserver) {
+        Long proprID = request.getId();
+        Proprietaire proprietaire=proprietaireRepository.findById(proprID).orElseThrow(null);
+        if(proprietaire!=null){
+            ProprietaireX.Proprietaire proprietaireResponse= ProprietaireX.Proprietaire.newBuilder()
+                    .setId(proprietaire.getId())
+                    .setAmount(proprietaire.get)
+                    .build();
+            responseObserver.onNext(compteResponse);
+            responseObserver.onCompleted();
+        }
+    }
+//
+//    @Override
+//    public void addCompte(Comptes.AddCompteRequest request, StreamObserver<Comptes.AddCompteResponse> responseObserver) {
+//        super.addCompte(request, responseObserver);
+//    }
+//
+//    @Override
+//    public void updateCompte(Comptes.UpdateCompteRequest request, StreamObserver<Comptes.UpdateCompteResponse> responseObserver) {
+//        super.updateCompte(request, responseObserver);
+//    }
+//
+//    @Override
+//    public void addCustomer(Comptes.AddCustomerRequest request, StreamObserver<Comptes.CustomerResponse> responseObserver) {
+//        super.addCustomer(request, responseObserver);
+//    }
+//
+//    @Override
+//    public void getCustomersList(Comptes.Empty request, StreamObserver<Comptes.CustomersListResponse> responseObserver) {
+//        super.getCustomersList(request, responseObserver);
+//    }
+//
+//    @Override
+//    public void deleteCompte(Comptes.DeleteCompteRequest request, StreamObserver<Comptes.DeleteCompteResponse> responseObserver) {
+//        super.deleteCompte(request, responseObserver);
+//    }
+
+}
+
