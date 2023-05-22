@@ -58,5 +58,7 @@
 
 ## Screenshots
 
-![App Screenshot](/REALME - assets/Diag DE CLASSE.png)
+![App Screenshot](./REALME - assets/Diag DE CLASSE.png)
+
+GENERATOR README : https://readme.so/fr
 
