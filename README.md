@@ -1,5 +1,5 @@
 
-# SprinBootApplication : RadarVehiculeSimulation
+# 🍃 SprinBootApplication & Distributed Systems: RadarVehiculeSimulation 🚀🚀
 
 ### On souhaite créer un système distribué basé sur les micro-services sous SpringBoot. Cette application devrait permettre de gérer et d’automatiser le processus des infractions concernant des véhicules suites à des dépassement de vitesses détectés par des radars automatiques.
 ---
@@ -11,7 +11,23 @@
 
 3. **infractions-service** qui permet de gérer les infractions.
 
+# 📝 Table of Contents
+- [Architecture](#architecture)
+- [Class Diagram](#class-diagram)
+- [Registration service](#registration-service)
+- [Infraction service](#infraction-service)
+- [Radar service](#radar-service)
+- [Radar gRPC client](#radar-grpc-client)
+- [Eureka discovery and gateway](#eureka-discovery-and-gateway)
+- [Angular client](#angular-client)
+- [Security with Keycloak](#security-with-keycloak)
+- [Docker](#docker)
 
+# Architecture
+![Architecture](/REALME - assets/architecture.png)
+
+# Class Diagram
+![Class Diagram](/REALME - assets/Diag DE CLASSE.png)
 
 ## Etapes d'execution de projet: 
   1.  Executer le service **EurekaDiscoveryService - microservice** : 
@@ -44,7 +60,37 @@
 
         
 
+# Angular client
+- Table with all radars registered in the system
+![Radars table](/REALME - assets/radars-table.png)
 
+
+- Radar registration form
+![Radar registration form](/REALME - assets/radar-registration-form.png)
+
+
+- Radar consultation
+![Radar consultation](/REALME - assets/radar-consultation.png)
+
+
+- Table with all infractions registered in the system
+![Infractions table](/REALME - assets/infractions-table.png)
+
+
+- Infraction registration form
+![Infraction registration form](/REALME - assets/infraction-registration-form.png)
+
+
+- Infraction consultation
+![Infraction consultation](/REALME - assets/infraction-consultation.png)
+
+
+- Table with all vehicles registered in the system
+![Vehicles table](/REALME - assets/vehicles-table.png)
+
+
+- Vehicle registration form
+![Vehicle registration form](/REALME - assets/vehicle-registration-form.png)
 
         
 ## Authors
@@ -52,13 +98,6 @@
 - [@Oussama El Aloui](https://www.github.com/Oussez)
 
 
-####
-
-
-
-## Screenshots
-
 ![App Screenshot](./REALME - assets/Diag DE CLASSE.png)
 
-GENERATOR README : https://readme.so/fr
 
