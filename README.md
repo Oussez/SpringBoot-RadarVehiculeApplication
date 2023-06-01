@@ -62,42 +62,39 @@
 
 # Angular client
 - Table with all radars registered in the system
-![Radars table](/REALME - assets/radars-table.png)
+![Radars table](/assets/radars-table.png)
 
 
 - Radar registration form
-![Radar registration form](/REALME - assets/radar-registration-form.png)
+![Radar registration form](/assets/radar-registration-form.png)
 
 
 - Radar consultation
-![Radar consultation](/REALME - assets/radar-consultation.png)
+![Radar consultation](/assets/radar-consultation.png)
 
 
 - Table with all infractions registered in the system
-![Infractions table](/REALME - assets/infractions-table.png)
+![Infractions table](/assets/infractions-table.png)
 
 
 - Infraction registration form
-![Infraction registration form](/REALME - assets/infraction-registration-form.png)
+![Infraction registration form](/assets/infraction-registration-form.png)
 
 
 - Infraction consultation
-![Infraction consultation](/REALME - assets/infraction-consultation.png)
+![Infraction consultation](/assets/infraction-consultation.png)
 
 
 - Table with all vehicles registered in the system
-![Vehicles table](/REALME - assets/vehicles-table.png)
+![Vehicles table](/assets/vehicles-table.png)
 
 
 - Vehicle registration form
-![Vehicle registration form](/REALME - assets/vehicle-registration-form.png)
+![Vehicle registration form](/assets/vehicle-registration-form.png)
 
         
 ## Authors
 
 - [@Oussama El Aloui](https://www.github.com/Oussez)
-
-
-![App Screenshot](./REALME - assets/Diag DE CLASSE.png)
 
 
