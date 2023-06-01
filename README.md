@@ -24,7 +24,7 @@
 - [Docker](#docker)
 
 # Architecture
-![Architecture](/REALME%20-%20assets/architecture.png)
+![Architecture](/assets/architecture.png)
 
 # Class Diagram
 ![Class Diagram](/assets/Diag%20DE%20CLASSE.png)
