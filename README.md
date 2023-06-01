@@ -56,7 +56,7 @@
 ![Radars table](/assets/IMMATRICULATION-SERVICE.png)
 
 - Page web : 
-![Radars table](/assets/IMMATRICULATION-SERVICE - WEB.png)
+![Radars table](/assets/IMMATRICULATION-SERVICE%20-%20WEB.png)
 ==================
 
   4. Executer le service **Infraction-service** :
