@@ -83,7 +83,7 @@
 
 - Page web : 
 
-![Radars table](/assets/RADAR-SERVICE%20-%20WEB.png)
+![Radars table](/assets/radar-SERVICE%20-%20WEB.png)
 
 # Angular client
 - Table with all radars registered in the system
