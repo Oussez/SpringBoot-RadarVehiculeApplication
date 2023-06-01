@@ -24,10 +24,10 @@
 - [Docker](#docker)
 
 # Architecture
-![Architecture](REALME - assets/architecture.png)
+![Architecture](REALME%20-%20assets/architecture.png)
 
 # Class Diagram
-![Class Diagram](/REALME - assets/Diag DE CLASSE.png)
+![Class Diagram](assets/Diag DE CLASSE.png)
 
 ## Etapes d'execution de projet: 
   1.  Executer le service **EurekaDiscoveryService - microservice** : 
