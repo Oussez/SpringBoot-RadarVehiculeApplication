@@ -32,6 +32,7 @@
 ## Etapes d'execution de projet: 
   1.  Executer le service **EurekaDiscoveryService - microservice** : 
   ⚡️il représente l'annuaire des micro-service déployés. Il enregistre dynamiquement les micro-service à l'aide de service **Gateway**
+  - Accéder à la page web :  http://localhost:8761proprietaires
 
 ==================
 
@@ -48,7 +49,7 @@
         - [@voiture-microservice](http://localhost:8085/IMMATRICULATION-SERVICE/vehicules)
         - le port 8085 correspond à le service **Gateway** 
 
-   - d) Accéder à la page web des enregistrements roprietaire: 
+   - d) Accéder à la page web des enregistrements proprietaire: 
         -  http://localhost:8085/IMMATRICULATION-SERVICE/proprietaires
         - [@proprietaire-microservice](http://localhost:8085/IMMATRICULATION-SERVICE/proprietaires)
 
@@ -56,6 +57,17 @@
 
   4. Executer le service **Infraction-service** :
    - a) Création des enregistrements de type **Infraction** et les stocker dans la base de données relative à l'entité Infraction.
+   - d) Accéder à la page web des enregistrements: 
+        -  http://localhost:8085/INFRACTION-SERVICE/infractions
+        - [@infraction-microservice](http://localhost:8085/INFRACTION-SERVICE/infractions)
+  
+=================
+
+ 5. Executer le service **radar-service** :
+   - a) Création des enregistrements de type **Radar** et les stocker dans la base de données relative à l'entité Infraction.
+   - d) Accéder à la page web des enregistrements: 
+        -  http://localhost:8085/RADAR-SERVICE/radars
+        - [@radar-microservice](http://localhost:8085/RADAR-SERVICE/radars)
 
 
         
