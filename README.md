@@ -56,6 +56,7 @@
 ![Radars table](/assets/IMMATRICULATION-SERVICE.png)
 
 - Page web : 
+
 ![Radars table](/assets/IMMATRICULATION-SERVICE%20-%20WEB.png)
 ==================
 
@@ -64,7 +65,12 @@
    - d) Accéder à la page web des enregistrements: 
         -  http://localhost:8085/INFRACTION-SERVICE/infractions
         - [@infraction-microservice](http://localhost:8085/INFRACTION-SERVICE/infractions)
-  
+        
+  ![Radars table](/assets/INFRACTION-SERVICE.png)
+
+- Page web : 
+
+![Radars table](/assets/INFRACTION-SERVICE%20-%20WEB.png)
 =================
 
  5. Executer le service **radar-service** :
@@ -73,8 +79,11 @@
         -  http://localhost:8085/RADAR-SERVICE/radars
         - [@radar-microservice](http://localhost:8085/RADAR-SERVICE/radars)
 
+![Radars table](/assets/RADAR-SERVICE.png)
 
-        
+- Page web : 
+
+![Radars table](/assets/RADAR-SERVICE%20-%20WEB.png)
 
 # Angular client
 - Table with all radars registered in the system
