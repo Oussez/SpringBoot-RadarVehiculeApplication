@@ -27,7 +27,7 @@
 ![Architecture](REALME%20-%20assets/architecture.png)
 
 # Class Diagram
-![Class Diagram](assets/Diag DE CLASSE.png)
+![Class Diagram](/REALME%20-%20assets/Diag%20DE%20CLASSE.png)
 
 ## Etapes d'execution de projet: 
   1.  Executer le service **EurekaDiscoveryService - microservice** : 
